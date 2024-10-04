@@ -23,11 +23,22 @@ struct AllahNamesView: View {
     var body: some View {
         NavigationView {
             VStack{
-                // Search Bar
-                SearchBar(text: $searchText, placeholder: "Search Name")
-                    //.frame(height: 120)
-                    
-                    
+                // Custom Search Bar
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
+                    TextField("Search...", text: $searchText)
+                        .foregroundColor(.gray)
+                }
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.white)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
+                )
+                .padding(.horizontal)
+                
+                
                 
                 ScrollView {
                     LazyVStack(spacing: 20) {
@@ -38,7 +49,8 @@ struct AllahNamesView: View {
                     .padding()
                 }
             }
-            .navigationTitle("99 Names of Allah")
+            //.navigationTitle("99 Names of Allah")
+            .navigationTitle("Asma'ul Husna")
             .background(Color("BackgroundColor"))
         }
     }

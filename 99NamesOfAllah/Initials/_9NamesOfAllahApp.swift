@@ -11,7 +11,8 @@ import SwiftUI
 struct _9NamesOfAllahApp: App {
     var body: some Scene {
         WindowGroup {
-            AllahNamesView()
+            //AllahNamesView()
+            SplashView()
         }
     }
 }
