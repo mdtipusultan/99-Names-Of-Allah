@@ -21,6 +21,7 @@ struct AllahNamesView: View {
                 .padding()
             }
             .navigationTitle("99 Names of Allah")
+            .background(Color("BackgroundColor"))
         }
     }
 }
@@ -33,22 +34,23 @@ struct AllahNameCard: View {
             Text(name.arabicName)
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(Color("PrimaryColor"))
+                //.foregroundColor(Color("MainColor"))
+                .foregroundColor(Color.white)
             
             Text(name.englishMeaning)
                 .font(.title2)
                 .fontWeight(.medium)
-                .foregroundColor(.gray)
+                //.foregroundColor(.gray)
             
-            Text(name.description)
-                .font(.body)
-                .foregroundColor(.secondary)
+//            Text(name.description)
+//                .font(.body)
+//                .foregroundColor(.secondary)
             
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 15)
-                .fill(LinearGradient(gradient: Gradient(colors: [Color("LightBackgroundColor"), Color("PrimaryColor").opacity(0.1)]), startPoint: .top, endPoint: .bottom))
+                .fill(LinearGradient(gradient: Gradient(colors: [Color("LightBackgroundColor"), Color("MainColor").opacity(0.1)]), startPoint: .top, endPoint: .bottom))
                 .shadow(color: .gray.opacity(0.2), radius: 10, x: 0, y: 10)
         )
         .padding(.horizontal)
@@ -58,4 +60,5 @@ struct AllahNameCard: View {
 
 #Preview {
     AllahNamesView()
+    //AllahNameCard()
 }
