@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct AllahNamesView: View {
     @ObservedObject var viewModel = AllahNamesViewModel()
@@ -26,28 +27,46 @@ struct AllahNamesView: View {
     }
 }
 
+//#Preview {
+//    AllahNamesView()
+//    //AllahNameCard()
+//}
+
+
 struct AllahNameCard: View {
     var name: AllahName
+    let synthesizer = AVSpeechSynthesizer() // Create speech synthesizer
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(name.arabicName)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                //.foregroundColor(Color("MainColor"))
-                .foregroundColor(Color.white)
+        HStack {
+            VStack(alignment: .leading, spacing: 8) {
+                Text(name.arabicName)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                
+                Text(name.transliteration)
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                
+                Text(name.englishMeaning)
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.white)
+                
+            }
+            Spacer()
             
-            Text(name.transliteration)
-                .font(.body)
-                .foregroundColor(.secondary)
-            
-            Text(name.englishMeaning)
-                .font(.title2)
-                .fontWeight(.medium)
-                //.foregroundColor(.gray)
-            
-            
-            
+            // Voice button
+            Button(action: {
+                speak(text: name.arabicName) // Call the function to speak the name
+            }) {
+                Image(systemName: "speaker.wave.2.fill")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .padding()
+                    .background(Circle().fill(Color.blue))
+            }
         }
         .padding()
         .background(
@@ -57,10 +76,11 @@ struct AllahNameCard: View {
         )
         .padding(.horizontal)
     }
-}
-
-
-#Preview {
-    AllahNamesView()
-    //AllahNameCard()
+    
+    // Function to speak the name
+    func speak(text: String) {
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "ar-SA") // Set language to Arabic
+        synthesizer.speak(utterance)
+    }
 }
