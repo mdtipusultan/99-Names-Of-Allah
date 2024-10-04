@@ -37,14 +37,16 @@ struct AllahNameCard: View {
                 //.foregroundColor(Color("MainColor"))
                 .foregroundColor(Color.white)
             
+            Text(name.transliteration)
+                .font(.body)
+                .foregroundColor(.secondary)
+            
             Text(name.englishMeaning)
                 .font(.title2)
                 .fontWeight(.medium)
                 //.foregroundColor(.gray)
             
-//            Text(name.description)
-//                .font(.body)
-//                .foregroundColor(.secondary)
+            
             
         }
         .padding()

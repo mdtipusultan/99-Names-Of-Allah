@@ -11,5 +11,5 @@ struct AllahName: Identifiable {
     let id = UUID()
     let arabicName: String
     let englishMeaning: String
-    let description: String
+    let transliteration: String
 }

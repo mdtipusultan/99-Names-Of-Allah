@@ -45,7 +45,7 @@ class AllahNamesViewModel: ObservableObject {
                 do {
                     let decodedResponse = try JSONDecoder().decode(APIResponse.self, from: data)
                     DispatchQueue.main.async {
-                        self.names = decodedResponse.data.map { AllahName(arabicName: $0.name, englishMeaning: $0.en.meaning, description: $0.en.description ?? "No description available") }
+                        self.names = decodedResponse.data.map { AllahName(arabicName: $0.name, englishMeaning: $0.en.meaning, transliteration: $0.transliteration) }
                     }
                 } catch {
                     print("Decoding error: \(error)")
@@ -70,6 +70,5 @@ struct AllahNameResponse: Codable {
 
 struct EnglishTranslation: Codable {
     let meaning: String
-    let description: String? // Make this optional
 }
 
