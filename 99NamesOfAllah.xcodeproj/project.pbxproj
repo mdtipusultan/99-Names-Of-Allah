@@ -13,6 +13,7 @@
 		7AB563382CADC53B007F63B7 /* AllahNamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB563372CADC53B007F63B7 /* AllahNamesView.swift */; };
 		7AB5633B2CADC586007F63B7 /* AllahNamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB5633A2CADC586007F63B7 /* AllahNamesViewModel.swift */; };
 		7AB5633D2CADC5A4007F63B7 /* AllahNamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB5633C2CADC5A4007F63B7 /* AllahNamesModel.swift */; };
+		7AB563402CB031DE007F63B7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB5633F2CB031DE007F63B7 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		7AB563372CADC53B007F63B7 /* AllahNamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllahNamesView.swift; sourceTree = "<group>"; };
 		7AB5633A2CADC586007F63B7 /* AllahNamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllahNamesViewModel.swift; sourceTree = "<group>"; };
 		7AB5633C2CADC5A4007F63B7 /* AllahNamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllahNamesModel.swift; sourceTree = "<group>"; };
+		7AB5633F2CB031DE007F63B7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		7AB563272CADC4E0007F63B7 /* 99NamesOfAllah */ = {
 			isa = PBXGroup;
 			children = (
+				7AB5633E2CB0314B007F63B7 /* Utilities */,
 				7AB563392CADC54F007F63B7 /* Initials */,
 				7AB563362CADC50B007F63B7 /* Home */,
 				7AB5632C2CADC4E3007F63B7 /* Assets.xcassets */,
@@ -87,6 +90,14 @@
 				7AB563282CADC4E0007F63B7 /* _9NamesOfAllahApp.swift */,
 			);
 			path = Initials;
+			sourceTree = "<group>";
+		};
+		7AB5633E2CB0314B007F63B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7AB5633F2CB031DE007F63B7 /* SearchBar.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			files = (
 				7AB563382CADC53B007F63B7 /* AllahNamesView.swift in Sources */,
 				7AB5633B2CADC586007F63B7 /* AllahNamesViewModel.swift in Sources */,
+				7AB563402CB031DE007F63B7 /* SearchBar.swift in Sources */,
 				7AB563292CADC4E0007F63B7 /* _9NamesOfAllahApp.swift in Sources */,
 				7AB5633D2CADC5A4007F63B7 /* AllahNamesModel.swift in Sources */,
 			);
@@ -304,6 +316,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +346,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

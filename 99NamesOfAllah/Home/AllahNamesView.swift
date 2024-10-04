@@ -10,16 +10,33 @@ import AVFoundation
 
 struct AllahNamesView: View {
     @ObservedObject var viewModel = AllahNamesViewModel()
+    @State private var searchText: String = ""
+    
+    var filteredNames: [AllahName] {
+        if searchText.isEmpty {
+            return viewModel.names
+        } else {
+            return viewModel.names.filter { $0.arabicName.contains(searchText) || $0.transliteration.lowercased().contains(searchText.lowercased()) }
+        }
+    }
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack(spacing: 20) {
-                    ForEach(viewModel.names) { name in
-                        AllahNameCard(name: name)
+            VStack{
+                // Search Bar
+                SearchBar(text: $searchText, placeholder: "Search Name")
+                    //.frame(height: 120)
+                    
+                    
+                
+                ScrollView {
+                    LazyVStack(spacing: 20) {
+                        ForEach(filteredNames) { name in
+                            AllahNameCard(name: name)
+                        }
                     }
+                    .padding()
                 }
-                .padding()
             }
             .navigationTitle("99 Names of Allah")
             .background(Color("BackgroundColor"))
