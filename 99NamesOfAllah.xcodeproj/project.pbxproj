@@ -14,6 +14,8 @@
 		7AB5633B2CADC586007F63B7 /* AllahNamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB5633A2CADC586007F63B7 /* AllahNamesViewModel.swift */; };
 		7AB5633D2CADC5A4007F63B7 /* AllahNamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB5633C2CADC5A4007F63B7 /* AllahNamesModel.swift */; };
 		7AB563422CB04977007F63B7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB563412CB04977007F63B7 /* SplashView.swift */; };
+		7AB563442CB11D6E007F63B7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB563432CB11D6D007F63B7 /* SettingsView.swift */; };
+		7AB563472CB11E54007F63B7 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB563462CB11E54007F63B7 /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		7AB5633A2CADC586007F63B7 /* AllahNamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllahNamesViewModel.swift; sourceTree = "<group>"; };
 		7AB5633C2CADC5A4007F63B7 /* AllahNamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllahNamesModel.swift; sourceTree = "<group>"; };
 		7AB563412CB04977007F63B7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		7AB563432CB11D6D007F63B7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7AB563462CB11E54007F63B7 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,8 @@
 		7AB563272CADC4E0007F63B7 /* 99NamesOfAllah */ = {
 			isa = PBXGroup;
 			children = (
-				7AB5633E2CB0314B007F63B7 /* Utilities */,
+				7AB563452CB11E34007F63B7 /* SideMenu */,
+				7AB5633E2CB0314B007F63B7 /* Settings */,
 				7AB563392CADC54F007F63B7 /* Initials */,
 				7AB563362CADC50B007F63B7 /* Home */,
 				7AB5632C2CADC4E3007F63B7 /* Assets.xcassets */,
@@ -93,11 +98,20 @@
 			path = Initials;
 			sourceTree = "<group>";
 		};
-		7AB5633E2CB0314B007F63B7 /* Utilities */ = {
+		7AB5633E2CB0314B007F63B7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				7AB563432CB11D6D007F63B7 /* SettingsView.swift */,
 			);
-			path = Utilities;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7AB563452CB11E34007F63B7 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7AB563462CB11E54007F63B7 /* SideMenuView.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +185,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB563382CADC53B007F63B7 /* AllahNamesView.swift in Sources */,
+				7AB563472CB11E54007F63B7 /* SideMenuView.swift in Sources */,
 				7AB5633B2CADC586007F63B7 /* AllahNamesViewModel.swift in Sources */,
 				7AB563422CB04977007F63B7 /* SplashView.swift in Sources */,
+				7AB563442CB11D6E007F63B7 /* SettingsView.swift in Sources */,
 				7AB563292CADC4E0007F63B7 /* _9NamesOfAllahApp.swift in Sources */,
 				7AB5633D2CADC5A4007F63B7 /* AllahNamesModel.swift in Sources */,
 			);
