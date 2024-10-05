@@ -132,10 +132,10 @@ struct AllahNamesView: View {
             
             // Side Menu
             if showMenu {
-                SideMenuView()  // Your SideMenuView implementation
-                    .frame(width: UIScreen.main.bounds.width * 0.5)
-                    .transition(.move(edge: .leading))  // Animates in from the left
-                    .zIndex(1)  // Ensure it appears above the main content
+//                SideMenuView()  // Your SideMenuView implementation
+//                    .frame(width: UIScreen.main.bounds.width * 0.5)
+//                    .transition(.move(edge: .leading))  // Animates in from the left
+//                    .zIndex(1)  // Ensure it appears above the main content
             }
         }
         .background(Color.black.opacity(showMenu ? 0.3 : 0))  // Dim background when menu is visible
